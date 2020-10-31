@@ -10,11 +10,6 @@ const chartData = {
   ],
 };
 
-/**
- * Lisada ül kus proovida erinevaid charti tüüpe: doughnut, line splineArea, bar.
- * Ülesandes ka muuta andmeid ja lisada dataPoint.
- */
-
 const chart = new CanvasJS.Chart('chartContainer', {
   title: {
     text: 'Minu graafik',
