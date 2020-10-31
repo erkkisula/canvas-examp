@@ -28,9 +28,22 @@ const addToChart = () => {
   chartData.dataPoints.push({ label, y });
 
   updateTitle();
+  colorLastPoint();
   chart.render();
 };
 
 const updateTitle = () => {
   chart.options.title.text = `Graafikus on hetkel ${chartData.dataPoints.length} punkti`;
+};
+
+const colorLastPoint = () => {
+  const length = chartData.dataPoints.length;
+
+  for (let i = 0; i < length; i++) {
+    if (i === length - 1) {
+      chartData.dataPoints[i].color = 'red';
+    } else {
+      delete chartData.dataPoints[i].color;
+    }
+  }
 };
