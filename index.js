@@ -21,11 +21,15 @@ chart.render();
 
 /* Chart updating functions */
 
-const addToChart = () => {
-  const label = document.getElementById('chartLabel').value;
-  const y = Number(document.getElementById('chartValue').value);
+const addToChart = (newLabel, newY) => {
+  if (!newLabel && !newY) {
+    const label = document.getElementById('chartLabel').value;
+    const y = Number(document.getElementById('chartValue').value);
 
-  chartData.dataPoints.push({ label, y });
+    chartData.dataPoints.push({ label, y });
+  } else {
+    chartData.dataPoints.push({ label: newLabel, y: newY });
+  }
 
   updateTitle();
   colorLastPoint();
@@ -47,3 +51,16 @@ const colorLastPoint = () => {
     }
   }
 };
+
+/**
+ * Lisada ül kus kaardile lisatakse iga sekund uus väärtus vahemikus 0 kuni 255
+ * Lahendus all
+ */
+
+const randomIterator = () => {
+  setInterval(() => {
+    addToChart(`punkt: ${chartData.dataPoints.length + 1}`, Math.floor(Math.random() * 256));
+  }, 1000);
+};
+
+randomIterator();
