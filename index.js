@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const chartData = {
-  type: 'column',
+  type: 'spline',
   dataPoints: [
     { label: 'jaanuar', y: 10 },
     { label: 'veebruar', y: 15 },
@@ -18,3 +18,15 @@ const chart = new CanvasJS.Chart('chartContainer', {
 });
 
 chart.render();
+
+/* Chart updating functions */
+
+const addToChart = () => {
+  const label = document.getElementById('chartLabel').value;
+  const y = Number(document.getElementById('chartValue').value);
+
+  chartData.dataPoints.push({ label, y });
+
+  console.log(chartData.dataPoints);
+  chart.render();
+};
