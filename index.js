@@ -35,7 +35,7 @@ const addToChart = (newLabel, newY) => {
 
     chartData.dataPoints.push({ label, y });
   } else {
-    iteratingChartData.dataPoints.push({ label: newLabel, y: newY });
+    iteratingChartData.dataPoints.push({ label: newLabel, y: newY, click: handlePointClick });
   }
 
   updateTitle();
@@ -60,9 +60,12 @@ const colorLastPoint = () => {
 };
 
 /**
- * Lisada ül kus kaardile lisatakse iga sekund uus väärtus vahemikus 0 kuni 255
- * Lahendus all
+ * Näidata enne ette mingi ez funktsiooniga console logib 'click'
  */
+
+const handlePointClick = (e) => {
+  alert(`nimi: ${e.dataPoint.label}, väärtus: ${e.dataPoint.y}`);
+};
 
 const randomIterator = () => {
   setInterval(() => {
