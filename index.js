@@ -27,6 +27,10 @@ const addToChart = () => {
 
   chartData.dataPoints.push({ label, y });
 
-  console.log(chartData.dataPoints);
+  updateTitle();
   chart.render();
+};
+
+const updateTitle = () => {
+  chart.options.title.text = `Graafikus on hetkel ${chartData.dataPoints.length} punkti`;
 };
