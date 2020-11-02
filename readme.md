@@ -2,7 +2,7 @@
 
 ### Mis igas sammus toimub
 
-- Seletab mis chart.js on, võtab cdn lingi ja teeme oma htmli
+- Seletab mis canvas.js on, võtab cdn lingi ja teeme oma htmli
 - Lisame htmli chart containeri ja selle stiili
 - Teeme uue js faili ja lisame selle htmli, js failis loome algse graafiku ilma andmeteta
 - Lisame graafikule andmed **(Sammus on ülesanne)**
