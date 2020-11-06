@@ -10,6 +10,6 @@
 - Muudame graafiku sirgeks ja lisame funktsiooni mis lisab uue punkti graafikusse
 - Lisame funktsiooni mis uuendab graafiku tiitlit iga uue punktiga
 - Näitame kuidas saab punktide värve muuta, lisame funktsiooni, mis värvib viimase lisatud punkti punaseks
-- **(Koug samm pmst ül)** Lisame funktsiooni, mis lisab ise iga sekundi tagant uue punkti.
+- **(Samm ise on ülesanne)** Lisame funktsiooni, mis lisab ise iga sekundi tagant uue punkti.
 - Muudame joone värvi ja lisame uue joone graafile.
 - Kuvame välja peale vajutatud punkti info
